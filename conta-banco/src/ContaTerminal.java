@@ -5,24 +5,24 @@ public class ContaTerminal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Número da Agência: ");
+        System.out.print("Digite o Número da Agência: ");
         String agencia = scanner.nextLine();
 
-        System.out.print("Número da Conta: ");
+        System.out.print("Digite o Número da Conta: ");
         while (!scanner.hasNextInt()){
-            System.out.println("Isso não é um número! Digite novamente: ");
+            System.out.println("Número inválido! Digite novamente: ");
             scanner.next();
             
         }
         int numeroDaConta = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.println("Nome do Cliente: ");
+        System.out.println("Digite o Nome do Cliente: ");
         String nomeDoCliente = scanner.nextLine();
 
-        System.out.print("Saldo:");
+        System.out.print("Digite o Saldo:");
         while (!scanner.hasNextBigDecimal()) {
-            System.out.println("Isso não é um número! Tente novamente.");
+            System.out.println("Saldo inválido! Digite novamente: ");
             scanner.next();
         }
         BigDecimal saldo = scanner.nextBigDecimal();
