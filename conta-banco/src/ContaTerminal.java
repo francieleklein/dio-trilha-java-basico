@@ -14,11 +14,11 @@ public class ContaTerminal {
             scanner.next();
             
         }
-        int numeroDaConta = scanner.nextInt();
+        int numeroConta = scanner.nextInt();
         scanner.nextLine();
 
         System.out.println("Digite o Nome do Cliente: ");
-        String nomeDoCliente = scanner.nextLine();
+        String nomeCliente = scanner.nextLine();
 
         System.out.print("Digite o Saldo:");
         while (!scanner.hasNextBigDecimal()) {
@@ -28,9 +28,9 @@ public class ContaTerminal {
         BigDecimal saldo = scanner.nextBigDecimal();
         scanner.nextLine();  
 
-        DadosBancarios dadosBancarios = new DadosBancarios(numeroDaConta, agencia, nomeDoCliente, saldo);
+        DadosBancarios dadosBancarios = new DadosBancarios(numeroConta, agencia, nomeCliente, saldo);
 
-        System.out.printf("Olá, %s! Obrigado(a) por criar uma conta em nosso banco. " + "Sua agência é: %s, a conta:  %d e seu saldo é de: %.2f. Inclusive já está disponível para saque.%n",
-            dadosBancarios.getNomeDoCliente(), dadosBancarios.getAgencia(), dadosBancarios.getNumeroDaConta(), dadosBancarios.getSaldo());
+        System.out.printf("Olá, %s! Obrigado por criar uma conta em nosso banco. " + "Sua agência é %s, conta  %d e seu saldo R$ %.2f já está disponível para saque.%n"
+            dadosBancarios.getNomeCliente(), dadosBancarios.getAgencia(), dadosBancarios.getNumeroConta(), dadosBancarios.getSaldo());
     }
 }

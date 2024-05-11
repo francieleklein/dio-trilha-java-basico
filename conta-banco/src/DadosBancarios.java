@@ -1,21 +1,21 @@
 import java.math.BigDecimal;
 
 public class DadosBancarios {
-    private int numeroDaConta;
+    private int numeroConta;
     private String agencia;
-    private String nomeDoCliente;
+    private String nomeCliente;
     private BigDecimal saldo;
 
-    public DadosBancarios(int numeroDaConta, String agencia, String nomeDoCliente, BigDecimal saldo) {
-        this.numeroDaConta = numeroDaConta;
+    public DadosBancarios(int numeroConta, String agencia, String nomeCliente, BigDecimal saldo) {
+        this.numeroConta = numeroConta;
         this.agencia = agencia;
-        this.nomeDoCliente = nomeDoCliente;
+        this.nomeCliente = nomeCliente;
         this.saldo = saldo;
     }
 
-    public int getNumeroDaConta() {
+    public int getNumeroConta() {
 
-        return numeroDaConta;
+        return numeroConta;
     }
 
     public String getAgencia() {
@@ -23,9 +23,9 @@ public class DadosBancarios {
         return agencia;
     }
 
-    public String getNomeDoCliente() {
+    public String getNomeCliente() {
 
-        return nomeDoCliente;
+        return nomeCliente;
     }
 
     public BigDecimal getSaldo() {
